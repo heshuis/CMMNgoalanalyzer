@@ -47,35 +47,35 @@ public class CMMNgoalanalyzer {
 					// for each goal corresponding to s1, for each goal corresponding to s2, 
 					for (Goal g1:pm1.getGoals()) {
 						for (Goal g2:pm2.getGoals()) {
-							if (!g1.equals(g2)) gn.setSupports(g1, g2, "milestone-sentry consistent");
+							if (!g1.equals(g2)) gn.setSupports(g1, g2, "milestone-sentry rule");
 						}
 					}
 				}
 				if (cs.isSentryConsistent(pm1,pm2)){
 					for (Goal g1:pm1.getGoals()) {
 						for (Goal g2:pm2.getGoals()) {
-							if (!g1.equals(g2)) gn.setComplements(g1, g2, "sentry consistent");
+							if (!g1.equals(g2)) gn.setComplements(g1, g2, "sentry rule");
 						}
 					}
 				}
 				if (cs.isHierarchyConsistent(pm1,pm2)){
 					for (Goal g1:pm1.getGoals()) {
 						for (Goal g2:pm2.getGoals()) {
-							if (!g1.equals(g2)) gn.setSupports(g1, g2, "hierarchy consistent");
+							if (!g1.equals(g2)) gn.setSupports(g1, g2, "hierarchy rule");
 						}
 					}
 				}
 				if (cs.isStageMilestoneConsistent(pm1,pm2)){
 					for (Goal g1:pm1.getGoals()) {
 						for (Goal g2:pm2.getGoals()) {
-							if (!g1.equals(g2)) gn.setComplements(g1, g2, "stage/task-milestone consistent");
+							if (!g1.equals(g2)) gn.setComplements(g1, g2, "stage/task-milestone rule");
 						}
 					}
 				}
 				if (cs.isStageOrTaskOutputConsistent(pm1,pm2)){
 					for (Goal g1:pm1.getGoals()) {
 						for (Goal g2:pm2.getGoals()) {
-							if (!g1.equals(g2)) gn.setExcludes(g1, g2, "stage/task-output-consistent");
+							if (!g1.equals(g2)) gn.setExcludes(g1, g2, "stage/task-output rule");
 						}
 					}
 				}
